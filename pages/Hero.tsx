@@ -34,7 +34,7 @@ const Hero = () => {
   }, []); // The empty dependency array means this effect runs only once on mount
 
   return (
-    <section className="h-screen w-full overflow-hidden flex justify-center text-center bg-transparent">
+    <section className="relative pt-[6rem] lg:pt-[8rem] h-screen w-full overflow-hidden flex justify-center text-center bg-transparent">
       <video
         autoPlay
         loop
