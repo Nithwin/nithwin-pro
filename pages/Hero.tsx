@@ -34,19 +34,19 @@ const Hero = () => {
   }, []); // The empty dependency array means this effect runs only once on mount
 
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center text-center p">
+    <section className="h-screen w-full overflow-hidden flex justify-center text-center bg-transparent">
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-2"
+        className="absolute top-0 left-0 w-full h-full  object-cover z-2"
         src="/landing_page_3.mp4"
       />
-      <div className="absolute top-0 left-0 w-full h-full bg-black/60 -z-10" />
+      {/* <div className="absolute top-0 left-0 w-full h-full bg-black/60 -z-10" /> */}
 
       <div className="relative z-10 flex flex-col items-center px-4 space-y-8">
-        <h1 className="font-clash text-5xl md:text-7xl font-semibold text-white tracking-wide">
+        <h1 className="font-clash text-3xl md:text-7xl font-semibold text-white tracking-wide">
           The {/* CHANGE 1: Using the exact gradient colors for the heading */}
           <span className="bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] bg-clip-text text-transparent">
             Decentralized
@@ -66,38 +66,25 @@ const Hero = () => {
               className={`
             transition-all duration-500 
             ${activeIndex === index ? "filter-none" : "brightness-50 "}
-            hover:filter-none
+            hover:filter-none 
           `}
             />
           ))}
         </div>
 
-        <div className="text-xl md:text-2xl text-gray-300 space-y-2">
+         <div className="text-xl md:text-3xl text-gray-200 space-y-2 font-bold">
           <div className="flex items-center justify-center space-x-2">
-            <p className="text-3xl font-bold">One click Swap & Earn on <span className="underline">Native</span></p>{" "}
-            {/* Space added after Native */}
+            <p>One click Swap & Earn on <span className="underline">Native</span></p>
             <VerticalCarousel
-              words={[
-                "Bitcoin",
-                "Ethereum",
-                "BNB Chain",
-                "THORChain",
-                "Cosmos",
-                "Avalanche",
-              ]}
-              className="text-3xl font-bold bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] bg-clip-text text-transparent"
+              words={["Bitcoin", "Ethereum", "BNB Chain", "THORChain", "Cosmos"]}
+              className="lg:text-3xl bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] bg-clip-text text-transparent"
             />
           </div>
           <div className="flex items-center justify-center space-x-2">
-            <p className="text-3xl font-bold">Own your keys, own your</p>
-            {/* Reusing the component for the second line */}
+            <p>Own your keys, own your</p>
             <VerticalCarousel
-              words={[
-                "Keys",
-                "Coins",
-                "Wallets",
-              ]}
-              className="text-3xl font-bold bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] bg-clip-text text-transparent"
+              words={["Keys", "Coins", "Wallets", "Assets"]}
+              className="text-3xl bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] bg-clip-text text-transparent"
             />
           </div>
         </div>
@@ -119,12 +106,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 text-white text-sm">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 text-white text-sm z-10">
         <p>Learn More</p>
         <FiChevronDown className="w-6 h-6 animate-bounce" />
       </div>
 
-      <div className="absolute bottom-6 right-6 flex items-center space-x-4 text-white text-xl">
+      <div className="absolute bottom-[6rem] right-1/5 flex items-center space-x-7 text-xl z-10 bg-gray-800 px-5 py-4 rounded-full text-cyan-600">
         <a href="#" className="hover:text-blue-400 transition-colors">
           <FaDiscord />
         </a>

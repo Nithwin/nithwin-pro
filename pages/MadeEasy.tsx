@@ -2,7 +2,11 @@ import React from 'react'
 
 const MadeEasy = () => {
   return (
-    <div>MadeEasy</div>
+    <section>
+      <div>
+        
+      </div>
+    </section>
   )
 }
 
