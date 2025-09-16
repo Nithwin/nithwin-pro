@@ -1,4 +1,6 @@
 import BuySection from "@/pages/BuySection"
+import DeFiSuperpowers from "@/pages/DeFiSuperpowers"
+import Footer from "@/pages/Footer"
 import Header from "@/pages/Header"
 import Hero from "@/pages/Hero"
 import MadeEasy from "@/pages/MadeEasy"
@@ -12,6 +14,8 @@ const Home = () => {
       <MadeEasy />
       <SwapSection />
       <BuySection />
+      <DeFiSuperpowers />
+      <Footer />
     </section>
   )
 }

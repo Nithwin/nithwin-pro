@@ -7,7 +7,7 @@ import { FiSearch, FiChevronDown } from "react-icons/fi";
 import { FaDiscord, FaTwitter, FaYoutube, FaMedium } from "react-icons/fa";
 import VerticalCarousel from "@/components/VerticalCarousel";
 
-// Array of your SVG icons from the public folder (kept as is)
+
 const svgIcons = [
   "/btc.svg",
   "/eth.svg",
@@ -22,16 +22,11 @@ const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    // Set up an interval that runs every 2 seconds
     const interval = setInterval(() => {
-      // Update the active index, looping back to 0 at the end of the array
       setActiveIndex((prevIndex) => (prevIndex + 1) % svgIcons.length);
     }, 2000); // 2000 milliseconds = 2 seconds
-
-    // 3. Cleanup function to clear the interval when the component unmounts
-    // This is crucial to prevent memory leaks!
     return () => clearInterval(interval);
-  }, []); // The empty dependency array means this effect runs only once on mount
+  }, []); 
 
   return (
     <section className="relative pt-[6rem] lg:pt-[8rem] h-screen w-full overflow-hidden flex justify-center text-center bg-transparent">
@@ -47,7 +42,7 @@ const Hero = () => {
 
       <div className="relative z-10 flex flex-col items-center px-4 space-y-8">
         <h1 className="font-clash text-3xl md:text-7xl font-semibold text-white tracking-wide">
-          The {/* CHANGE 1: Using the exact gradient colors for the heading */}
+          The
           <span className="bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] bg-clip-text text-transparent">
             Decentralized
           </span>{" "}
@@ -62,7 +57,6 @@ const Hero = () => {
               alt={iconPath.split("/")[1].split(".")[0]}
               width={24}
               height={24}
-              // 4. Dynamic className for the animation
               className={`
             transition-all duration-500 
             ${activeIndex === index ? "filter-none" : "brightness-50 "}
@@ -72,23 +66,23 @@ const Hero = () => {
           ))}
         </div>
 
-         <div className="text-xl md:text-3xl text-gray-200 space-y-2 font-bold">
-          <div className="flex items-center justify-center space-x-2">
-            <p>One click Swap & Earn on <span className="underline">Native</span></p>
-            <VerticalCarousel
-              words={["Bitcoin", "Ethereum", "BNB Chain", "THORChain", "Cosmos"]}
-              className="lg:text-3xl bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] bg-clip-text text-transparent"
-            />
-          </div>
-          <div className="flex items-center justify-center space-x-2">
-            <p>Own your keys, own your</p>
-            <VerticalCarousel
-              words={["Keys", "Coins", "Wallets", "Assets"]}
-              className="text-3xl bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] bg-clip-text text-transparent"
-            />
-          </div>
-        </div>
-
+       
+<div className="text-xl md:text-3xl text-gray-200 space-y-2 font-bold text-center">
+  <p className="leading-relaxed lg:flex lg:items-center lg:gap-2"> 
+    One click Swap & Earn on <span className="underline">Native</span>{' '}
+    <VerticalCarousel
+      words={["Bitcoin", "Ethereum", "THORChain", "Cosmos"]}
+      className="inline-block mx-auto lg:m-0 align-middle text-lg lg:text-2xl bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] bg-clip-text text-transparent"
+    />
+  </p>
+  <p className="leading-relaxed flex items-center text-2xl justify-center lg:gap-2 mx-auto text-center w-full">
+    own your{' '}
+    <VerticalCarousel
+      words={["Keys", "Coins", "Wallets", "Assets"]}
+      className="inline-block mx-auto lg:m-0 align-middle bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] bg-clip-text text-transparent"
+    />
+  </p>
+</div>
         <div className="relative w-full max-w-lg bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] p-[0.1rem] rounded-full">
           <input
             type="search"
@@ -99,7 +93,6 @@ const Hero = () => {
         </div>
 
         <div>
-          {/* --- CHANGE 3: Using the exact gradient and glow/shadow for the button --- */}
           <button className="text-white cursor-pointer font-semibold text-lg py-3 px-10 rounded-full bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] hover:opacity-90 transition-all duration-300 shadow-lg shadow-black/40 hover:shadow-black/60">
             Start Swapping
           </button>

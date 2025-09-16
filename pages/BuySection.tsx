@@ -4,10 +4,10 @@ import React from "react";
 const BuySection = () => {
   return (
     <section className="bg-[#1C2037] py-20 px-4 sm:px-6 lg:px-8 text-white">
-      <div className="container gap-12 mx-auto max-w-7xl w-full flex flex-col">
-        <div className="flex justify-between w-full items-center">
-          <div className="w-1/2 flex flex-col gap-4">
-            <p className="text-5xl font-bold">
+      <div className="container gap-16 lg:gap-12 mx-auto max-w-7xl w-full flex flex-col">
+        <div className="flex flex-col-reverse lg:flex-row justify-between w-full items-center">
+          <div className="lg:w-1/2 flex flex-col gap-4">
+            <p className="text-2xl lg:text-5xl font-bold">
               Full{" "}
               <span className="bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] text-transparent bg-clip-text">
                 Self-custody
@@ -18,7 +18,7 @@ const BuySection = () => {
               bridges or wrapping assets
             </p>
           </div>
-          <div className="w-1/2 ">
+          <div className="lg:w-1/2 ">
             <Image
               alt="img"
               width={400}
@@ -28,8 +28,8 @@ const BuySection = () => {
             />
           </div>
         </div>
-        <div className="flex justify-between w-full items-center">
-          <div className="w-1/2 ">
+        <div className="flex flex-col lg:flex-row justify-between w-full items-center">
+          <div className="lg:w-1/2 ">
             <Image
               alt="img"
               width={500}
@@ -38,14 +38,14 @@ const BuySection = () => {
               src={"/with-us-img-3.png"}
             />
           </div>
-          <div className="w-1/2 flex flex-col gap-5">
-            <p className="text-4xl font-bold">
+          <div className="lg:w-1/2 flex flex-col gap-5">
+            <p className="text-2xl lg:text-4xl font-bold">
               <span className="bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] text-transparent bg-clip-text">
                 Earn REAL Yields{" "}
               </span>
               on your Native Assets
             </p>
-            <p className="text-xl text-gray-400">
+            <p className="text-sm lg:text-xl text-gray-400">
               Provide Liquidity and Earn Yield on your Native Assets with <span className="text-white">Impermanent Loss Protection</span>
             </p>
             <div>
@@ -53,16 +53,16 @@ const BuySection = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between w-full items-center">
+        <div className="flex flex-col-reverse lg:flex-row justify-between w-full items-center">
           
-          <div className="w-1/2 flex flex-col gap-5">
-            <p className="text-4xl font-bold">
+          <div className="lg:w-1/2 flex flex-col gap-5">
+            <p className="text-2xl lg:text-4xl font-bold">
               <span className="bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] text-transparent bg-clip-text">
                 $THOR{" "}
               </span>
               Value Accrual
             </p>
-            <p className="text-xl text-gray-400">
+            <p className="text-sm lg:text-xl text-gray-400">
               Stake $THOR token and earn <span className="text-white">75%</span> of protocol revenues, trading discounts and other community perks.
             </p>
             <div className="flex gap-5">
@@ -70,7 +70,7 @@ const BuySection = () => {
                 <button className="bg-blue-400 text-white font-semibold px-8 py-4 rounded-full text-sm hover:opacity-85 delay-150 ease-linear cursor-pointer">Stake</button>
             </div>
           </div>
-          <div className="w-1/2 ">
+          <div className="lg:w-1/2 ">
             <Image
               alt="img"
               width={500}

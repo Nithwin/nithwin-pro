@@ -12,21 +12,21 @@ const SwapSection = () => {
 
         
         <div className="text-center lg:text-left">
-          <h2 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+          <h2 className="text-4xl lg:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
             <span className="bg-gradient-to-r from-[#7B50E8] via-[#388DF3] to-[#4DBBD6] bg-clip-text text-transparent">
               Swap
             </span> <br />
             Any Token, <br />
             Any Chain
           </h2>
-          <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto lg:mx-0">
+          <p className="text-gray-400 text-sm lg:text-lg mb-8 max-w-xl mx-auto lg:mx-0">
             THORSwap's DEX Aggregator connects liquidity across 9
             blockchains and compares pricing from numerous
             Aggregators (1inch, Matcha) & DEXs (Uniswap, Sushiswap,
             Pangolin) to give you the best cross-chain swap in one
             click.
           </p>
-          <button className="bg-[#4DBBD6] text-white font-semibold py-4 px-10 rounded-full text-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+          <button className="bg-[#4DBBD6] text-white font-semibold py-4 px-10 rounded-full text-sm lg:text-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
             Start Swapping
           </button>
         </div>
