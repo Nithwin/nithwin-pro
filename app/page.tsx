@@ -1,6 +1,7 @@
 import Header from "@/pages/Header"
 import Hero from "@/pages/Hero"
 import MadeEasy from "@/pages/MadeEasy"
+import SwapSection from "@/pages/SwapSection"
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Header />
       <Hero />
       <MadeEasy />
+      <SwapSection />
     </section>
   )
 }
