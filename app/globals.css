@@ -3,14 +3,17 @@
 /* Add your custom font imports here if you are not using next/font */
 /* @import url('...'); */
 
+@theme{
+  --color-gr: linear-gradient(to right, #7B50E8, #388DF3, #4DBBD6);
+}
+
 body {
   /* The exact background from thorswap.finance */
   background-color: #0c0f1a;
   background-image: radial-gradient(at 2% 2%, hsla(240, 60%, 5%, 1) 0px, transparent 50%),
                     radial-gradient(at 98% 98%, hsla(240, 60%, 5%, 1) 0px, transparent 50%);
-  color: white; /* Set a default text color for better readability */
+  color: white; 
 }
-
 /* Example of applying the heading font */
 h1, .h1-style {
   font-family: 'Clash Display', sans-serif;
